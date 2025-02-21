@@ -4,10 +4,16 @@ Bem-vindo ao repositório do projeto da Faculdade! Este repositório foi desenvo
    Este repositório tem como objetivo hospedar todos os conteúdos da minha trajetória em ciência da computação, este repositório serve tanto para fins de avaliação como realizações pessoais na instituição. 
    
    ## 📁 Estrutura do Repositório:
+   
    ```
    Super_Trunfo_Iniciante/
    │-- super_trunfo_iniciante.c  # Código-fonte principal
    │-- super_trunfo_iniciante    # Arquivo executável (compilado)
+   │-- README.md                 # Documentação do projeto
+     
+     Super_Trunfo - Aventureiro /
+   │-- super_trunfo_aventureiro.c  # Código-fonte principal
+   │-- super_trunfo_aventureiro   # Arquivo executável (compilado)
    │-- README.md                 # Documentação do projeto
    ```
    Atualmente conto com apenas um projeto finalizado.
