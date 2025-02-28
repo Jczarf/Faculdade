@@ -6,6 +6,12 @@ Super Trunfo - Mestre
    - Implementação de lógica de comparação de cartas.
    - Estruturação básica de um jogo.
    - Interface simples via terminal.
+
+  ## 📌 Desafio nível mestre
+   
+  <img src ="src/mestre.jpg" style = "height: 500px ; width: 400px"/>
+
+
    ## 📁 Estrutura do Repositório
    ```
    Faculdade/
