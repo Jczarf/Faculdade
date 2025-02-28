@@ -1,4 +1,4 @@
-1. Super Trunfo - Iniciante
+ Super Trunfo - Iniciante
 
    Bem-vindo ao repositório do projeto **Super Trunfo - Iniciante**! Este projeto foi desenvolvido como parte das atividades acadêmicas da faculdade.
    ## 📌 Sobre o Projeto
