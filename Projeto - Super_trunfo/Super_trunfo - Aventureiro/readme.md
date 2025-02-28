@@ -79,27 +79,6 @@ Inicia a função main(), onde o programa será executado.
 
 ```c
 
-    char estado_1, estado_2; // Estados das cartas (A-H)
-    char codigo_carta_1[5], codigo_carta_2[5]; // Códigos das cartas (até 4 caracteres)
-    char nome_cidade_1[18], nome_cidade_2[18]; // Nomes das cidades (até 17 caracteres)
-    int qtd_populacao_1, qtd_populacao_2; // Quantidade de população das cidades
-    float area_km_1, area_km_2; // Área das cidades em km²
-    float pib_carta_1, pib_carta_2; // PIB das cidades em bilhões de reais
-    int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2; // Número de pontos turísticos
-    float calc_densidade_populacional; // Variável para armazenar a densidade populacional
-    float calc_pib_per_capita; // Variável para armazenar o PIB per capita
-    float pib_capita_carta_1 , pib_capita_carta_2 ; // Armazena o valor do calculo do pib
-    float densidade_carta_1 , densidade_carta_2 ; // Armazena o valor do calculo das densidades 
-    const float casting_bilhao = 1000000000; // Constante para conversão de bilhões para unidades
-    const char validacao[30] = "Cadastro com sucesso!"; // Mensagem de validação
-
-```
-
-Essas variáveis armazenam informações das cartas, como estado, código, nome da cidade, população, área, PIB e número de pontos turísticos, e os cálculos das variáveis para os resultados das questões.
-
-
-```
-
     Declaração das variáveis para armazenar informações das cartas.
     char estado_1, estado_2; → Armazena o estado da cidade da carta.
     char codigo_carta_1[5], codigo_carta_2[5]; → Código identificador da carta.
@@ -116,6 +95,9 @@ Essas variáveis armazenam informações das cartas, como estado, código, nome 
     const char validacao[30] = "Cadastro com sucesso!"; → Mensagem fixa exibida após cada cadastro.
 
 ```
+
+Essas variáveis armazenam informações das cartas, como estado, código, nome da cidade, população, área, PIB e número de pontos turísticos, e os cálculos das variáveis para os resultados das questões.
+
 
 ### 5️⃣ Entrada de Dados para a Carta 1
 

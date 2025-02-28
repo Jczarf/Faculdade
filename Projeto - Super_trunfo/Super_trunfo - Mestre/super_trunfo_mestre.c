@@ -137,37 +137,38 @@ int main() {
     printf("+--------------------------------------+\n");
 
     // Comparações das cartas
-    printf("\nComparações das cartas:\n");
+    printf("\n+--------------------------------------+\n");
+    printf("\n| Comparações das cartas:\n");
 
     identificador_carta = qtd_cartas; // Inicializa o identificador de carta
 
     comparador = qtd_populacao_1 > qtd_populacao_2; // Compara população
     identificador_carta = qtd_cartas - comparador;
-    printf("População: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| População: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
     comparador = area_km_1 > area_km_2; // Compara área
     identificador_carta = qtd_cartas - comparador;
-    printf("Área: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| Área: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
     comparador = pib_carta_1 > pib_carta_2; // Compara PIB
     identificador_carta = qtd_cartas - comparador;
-    printf("PIB: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| PIB: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
     comparador = qtd_pontos_turisticos_1 > qtd_pontos_turisticos_2; // Compara pontos turísticos
     identificador_carta = qtd_cartas - comparador;
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| Pontos Turísticos: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
     comparador = densidade_carta_1 < densidade_carta_2; // Compara densidade populacional
     identificador_carta = qtd_cartas - comparador;
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| Densidade Populacional: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
     comparador = pib_capita_carta_1 > pib_capita_carta_2; // Compara PIB per capita
     identificador_carta = qtd_cartas - comparador;
-    printf("PIB per Capita: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| PIB per Capita: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
     comparador = super_poder_carta_1 > super_poder_carta_2; // Compara super poder
     identificador_carta = qtd_cartas - comparador;
-    printf("Super poder: Carta %d venceu (%d)\n", identificador_carta, comparador);
-
+    printf("| Super poder: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("\n+--------------------------------------+\n");
     return 0;
 }

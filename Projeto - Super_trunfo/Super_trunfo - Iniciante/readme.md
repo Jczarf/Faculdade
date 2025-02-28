@@ -78,22 +78,6 @@ Inicia a função main(), onde o programa será executado.
 ### 4️⃣ Declaração de Variáveis
 
 
-```c
-
-    char estado_1, estado_2;
-    char codigo_carta_1[5], codigo_carta_2[5];
-    char nome_cidade_1[18], nome_cidade_2[18];
-    int qtd_populacao_1, qtd_populacao_2;
-    float area_km_1, area_km_2;
-    float pib_carta_1, pib_carta_2;
-    int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2;
-    const char validacao[30] = "Cadastro com sucesso!";
-
-
-```
-
-Essas variáveis armazenam informações das cartas, como estado, código, nome da cidade, população, área, PIB e número de pontos turísticos.
-
 ```
     Declaração das variáveis para armazenar informações das cartas.
     char estado_1, estado_2; → Armazena o estado da cidade da carta.
@@ -106,6 +90,10 @@ Essas variáveis armazenam informações das cartas, como estado, código, nome 
     const char validacao[30] = "Cadastro com sucesso!"; → Mensagem fixa exibida após cada cadastro.
 
 ```
+
+Essas variáveis armazenam informações das cartas, como estado, código, nome da cidade, população, área, PIB e número de pontos turísticos.
+
+
 
 ### 5️⃣ Entrada de Dados para a Carta 1
 
