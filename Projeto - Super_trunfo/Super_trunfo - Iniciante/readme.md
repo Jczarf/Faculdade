@@ -6,7 +6,12 @@
    - Implementação de lógica de comparação de cartas.
    - Estruturação básica de um jogo.
    - Interface simples via terminal.
-   ## 📁 Estrutura do Repositório
+  
+   ## 📌 Desafio nível iniciante 
+  
+  <img src ="/src/iniciante.jpg"/>
+  
+  ## 📁 Estrutura do Repositório
    ```
    Faculdade/
    Projeto - Super_trunfo / 
