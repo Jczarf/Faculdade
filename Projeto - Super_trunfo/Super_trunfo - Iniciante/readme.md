@@ -9,7 +9,7 @@
   
    ## 📌 Desafio nível iniciante 
   
-  <img src ="/src/iniciante.jpg"/>
+  <img src ="src/iniciante.jpg" style= "height: 500px ; width: 400px"/>
   
   ## 📁 Estrutura do Repositório
    ```
