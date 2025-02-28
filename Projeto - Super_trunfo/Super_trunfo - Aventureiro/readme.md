@@ -6,6 +6,11 @@
    - Implementação de lógica de comparação de cartas.
    - Estruturação básica de um jogo.
    - Interface simples via terminal.
+
+   ## 📌 Desafio nível Aventureiro
+   
+  <img src ="src/aventureiro.jpg" style = "height: 500px ; width: 400px"/>
+
    ## 📁 Estrutura do Repositório
    ```
     Faculdade/
