@@ -57,4 +57,4 @@ Este repositório é de uso acadêmico, mas estou aberto a sugestões e melhoria
 
 ---
 
-📅 **Atualizado em:** 21/02/2025 📌 **Desenvolvido por:** Júlio Cézar
+📅 **Atualizado em:** 28/02/2025 📌 **Desenvolvido por:** Júlio Cézar
