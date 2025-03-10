@@ -98,7 +98,7 @@ int main() {
     printf("| Densidade Populacional: %.2f hab/km²  \n", densidade_carta_1);
     printf("| PIB per capita: R$ %.2f               \n", pib_capita_carta_1);
     printf("| Super poder: %.2f                     \n", super_poder_carta_1);
-    printf("+--------------------------------------+\n");
+    printf("%s", estilo);
 
     // **Repetição para a carta 2**
     
@@ -113,7 +113,7 @@ int main() {
     printf("| Densidade Populacional: %.2f hab/km²  \n", densidade_carta_2);
     printf("| PIB per capita: R$ %.2f               \n", pib_capita_carta_2);
     printf("| Super poder: %.2f                     \n", super_poder_carta_2);
-    printf("+--------------------------------------+\n");
+    printf("%s", estilo);
 
     // **Comparação entre as cartas**
     
