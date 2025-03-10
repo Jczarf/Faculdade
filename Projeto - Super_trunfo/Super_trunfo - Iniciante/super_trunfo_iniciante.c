@@ -6,7 +6,7 @@ int main() {
     Desafio de código: Super Trunfo - Iniciante.
     */
 
-    // Declaração de variáveis
+    //**Declaração de variáveis**
     char estado_1, estado_2;
     char codigo_carta_1[5], codigo_carta_2[5];
     char nome_cidade_1[18], nome_cidade_2[18];
@@ -16,14 +16,17 @@ int main() {
     int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2;
     const char validacao[30] = "Cadastro com sucesso!";
 
-    // Entrada do usuário
+    //**Variaveis de estilo**
+    const char estilo [50] = "\n+--------------------------------------+\n" ;
+
+    // **Entrada do usuário**
+
+    // Carta 1:
+    
+    printf("%s", estilo);
     
     printf("\nCarta 1:");
     
-    printf("\n+--------------------------------------+\n");
-    
-    // Carta 1:
-
     printf("\nDigite o estado da primeira carta (A-H): ");
     scanf(" %c", &estado_1);
 
@@ -46,10 +49,10 @@ int main() {
     scanf("%d", &qtd_pontos_turisticos_1);
 
     printf("\n%s\n", validacao);
-
-    printf("\n+--------------------------------------+\n");
-
+    
     // Carta 2:
+    printf("%s", estilo);
+
     printf("\nCarta 2:\n");
 
     printf("\nDigite o estado da segunda carta (A-H): ");
@@ -78,7 +81,8 @@ int main() {
     // Saída para o usuário, cartas cadastradas
 
     // Primeira carta:
-    printf("\n+--------------------------------------+\n");
+    
+    printf("%s", estilo);
     printf("| Carta 1:                              \n");
     printf("| Estado: %c                            \n", estado_1);
     printf("| Código: %s                            \n", codigo_carta_1);
@@ -87,10 +91,11 @@ int main() {
     printf("| Área: %.2f km2                        \n", area_km_1);
     printf("| PIB: R$ %.2f bilhões                  \n", pib_carta_1);
     printf("| Pontos turísticos: %d                 \n", qtd_pontos_turisticos_1);
-    printf("+--------------------------------------+\n");
+    printf("%s", estilo);
+    
 
     // Segunda carta:
-    printf("\n+--------------------------------------+\n");
+    printf("%s", estilo);
     printf("| Carta 2:                             \n");
     printf("| Estado: %c                           \n", estado_2);
     printf("| Código: %s                           \n", codigo_carta_2);
@@ -99,7 +104,7 @@ int main() {
     printf("| Área: %.2f km2                       \n", area_km_2);
     printf("| PIB: R$ %.2f bilhões                 \n", pib_carta_2);
     printf("| Pontos turísticos: %d                \n", qtd_pontos_turisticos_2);
-    printf("+--------------------------------------+\n");
-
+    printf("%s", estilo);
+    
     return 0;
 }
