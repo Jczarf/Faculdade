@@ -1,54 +1,94 @@
- Super Trunfo - Aventureiro
+ # 🃏 Super Trunfo - Nível Aventureiro
 
-   Bem-vindo ao repositório do projeto **Super Trunfo - Aventureiro**! Este projeto foi desenvolvido como parte das atividades acadêmicas da faculdade.
-   ## 📌 Sobre o Projeto
-   Este projeto é uma implementação básica do jogo **Super Trunfo**, onde os jogadores comparam atributos de cartas para determinar o vencedor. Ele inclui:
-   - Implementação de lógica de comparação de cartas.
-   - Estruturação básica de um jogo.
-   - Interface simples via terminal.
+## 📌 Descrição do Desafio
+Neste nível, você irá aprimorar o sistema do **Super Trunfo de Países**, adicionando cálculos automáticos para **Densidade Populacional** e **PIB per Capita**. Esses novos atributos ajudarão a enriquecer a análise das cidades no jogo.
 
-   ## 📌 Desafio nível Aventureiro
-   
-  <img src ="src/aventureiro.jpg" style = "height: 500px ; width: 400px"/>
+---
 
-   ## 📁 Estrutura do Repositório
-   ```
-    Faculdade/
-   Projeto - Super_trunfo / 
-   Super_Trunfo - Aventureiro /
-   │-- super_trunfo_aventureiro.c  # Código-fonte principal
-   │-- super_trunfo_aventureiro   # Arquivo executável (compilado)
-   │-- README.md                 # Documentação do projeto
-   ```
-   ## 🛠️ Tecnologias Utilizadas
-   O projeto foi desenvolvido utilizando:
-   - **Linguagem:** C
-   - **Compilador:** GCC
-   - **Ferramentas:** Git, VS Code
-   ## 🚀 Como Executar o Projeto
-   1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-2. Navegue até a pasta do projeto:
-   ```bash
-   cd Super_Trunfo_aventureiro
-   ```
-3. Compile o código:
-   ```bash
-   gcc super_trunfo_aventureiro.c -o super_trunfo_aventureiro
-   ```
-4. Execute o programa:
-   ```bash
-   ./super_trunfo_aventureiro
-   ```
+## 🎯 O que será implementado
 
-## 📜 Explicação do Código
+✅ **Entrada de Dados**: O usuário poderá inserir os dados de duas cartas.
+✅ **Armazenamento das Informações**: Os dados serão armazenados corretamente.
+✅ **Cálculo Automático de Novos Atributos**:
+   - **Densidade Populacional** = População / Área (habitantes por km²)
+   - **PIB per Capita** = PIB / População (riqueza média por habitante)
+✅ **Exibição Formatada**: O programa imprimirá os dados de cada cidade com os valores calculados, formatados com **duas casas decimais**.
+✅ **Eficiência**: O programa realizará os cálculos de forma otimizada, garantindo uma boa performance.
 
-### 📌 Estrutura Geral
+### 🔹 Atributos das Cartas
+Cada carta conterá os seguintes atributos:
 
-O código solicita ao usuário que insira dados de duas cartas e, em seguida, exibe esses dados no terminal e calcula a densidade e o pib per capita .
+| Atributo                   | Tipo   | Descrição |
+|----------------------------|--------|-----------|
+| Estado                     | Char   | Uma letra de 'A' a 'H' representando um estado |
+| Código da Carta            | String | A letra do estado seguida de um número (ex: A01, B03) |
+| Nome da Cidade             | String | Nome da cidade |
+| População                  | Int    | Número de habitantes |
+| Área (km²)                 | Float  | Área da cidade |
+| PIB (bilhões de reais)     | Float  | Produto Interno Bruto |
+| Número de Pontos Turísticos | Int    | Quantidade de pontos turísticos |
+| **Densidade Populacional**  | Float  | População / Área |
+| **PIB per Capita**          | Float  | PIB / População |
 
+---
+
+## 📜 Exemplo de Execução
+
+```bash
+🃏 Bem-vindo ao Super Trunfo de Países!
+
+🔹 Insira os dados da primeira carta:
+Estado: A
+Código da Carta: A01
+Nome da Cidade: São Paulo
+População: 12325000
+Área: 1521.11
+PIB: 699.28
+Número de Pontos Turísticos: 50
+
+🔹 Insira os dados da segunda carta:
+Estado: B
+Código da Carta: B02
+Nome da Cidade: Rio de Janeiro
+População: 6748000
+Área: 1200.25
+PIB: 300.50
+Número de Pontos Turísticos: 30
+
+📜 Cartas cadastradas:
+
+Carta 1:
+Estado: A
+Código: A01
+Nome da Cidade: São Paulo
+População: 12325000
+Área: 1521.11 km²
+PIB: 699.28 bilhões de reais
+Número de Pontos Turísticos: 50
+Densidade Populacional: 8102.47 hab/km²
+PIB per Capita: 56724.32 reais
+
+Carta 2:
+Estado: B
+Código: B02
+Nome da Cidade: Rio de Janeiro
+População: 6748000
+Área: 1200.25 km²
+PIB: 300.50 bilhões de reais
+Número de Pontos Turísticos: 30
+Densidade Populacional: 5622.24 hab/km²
+PIB per Capita: 44532.91 reais
+```
+
+---
+
+## 🛠 Tecnologias Utilizadas
+- Linguagem: **C**
+- Estruturas de entrada: `scanf` para capturar dados do usuário.
+- Operações matemáticas para cálculos de densidade populacional e PIB per capita.
+- Impressão formatada no terminal com `printf`.
+
+---
 ### 1️⃣ Inclusão Biblioteca 
 
 ```c
@@ -64,7 +104,7 @@ Inclui a biblioteca padrão do C para entrada e saída de dados (printf, scanf e
 
 ```c
 
-    int main () {
+    int main () {}
 
 ```
 Inicia a função main(), onde o programa será executado.
@@ -84,20 +124,25 @@ Inicia a função main(), onde o programa será executado.
 
 ```c
 
-    Declaração das variáveis para armazenar informações das cartas.
-    char estado_1, estado_2; → Armazena o estado da cidade da carta.
-    char codigo_carta_1[5], codigo_carta_2[5]; → Código identificador da carta.
-    char nome_cidade_1[18], nome_cidade_2[18]; → Nome da cidade.
-    int qtd_populacao_1, qtd_populacao_2; → População da cidade.
-    float area_km_1, area_km_2; → Área em km² da cidade.
-    float pib_carta_1, pib_carta_2; → PIB da cidade.
-    int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2; → Número de pontos turísticos.float calc_densidade_populacional ;
-    float calc_densidade_populacional ;  → aqui armazena o calculo da densidade populacional.
-    float calc_pib_per_capita ; →  aqui é a variável que armazena o calculo de renda por capita por pessoa. 
-    float pib_capita_carta_1 , pib_capita_carta_2 ; → Aqui é a variável que armazena o resultado da renda por capita
-    float densidade_carta_1 , densidade_carta_2 ; →  Aqui é a vriavel  que armazena o calculo da densidade.
-    const float casting_bilhao = 1000000000 ; → Aqui é o valor que fiz para fazer a conversão de decimal para o número inteiro.
-    const char validacao[30] = "Cadastro com sucesso!"; → Mensagem fixa exibida após cada cadastro.
+    / **Declaração das variáveis**
+    char estado_1, estado_2; // Estados das cartas (A-H)
+    char codigo_carta_1[5], codigo_carta_2[5]; // Códigos das cartas (até 4 caracteres)
+    char nome_cidade_1[18], nome_cidade_2[18]; // Nomes das cidades (até 17 caracteres)
+    unsigned long int qtd_populacao_1, qtd_populacao_2; // População dos países
+    float area_km_1, area_km_2; // Área em km²
+    float pib_carta_1, pib_carta_2; // PIB em bilhões de reais
+    int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2; // Pontos turísticos
+
+    // **Variaveis para estilo**
+    const char estilo [50] = "\n+--------------------------------------+\n" ;
+
+    // **Variáveis para cálculos**
+    float densidade_carta_1, densidade_carta_2; // Densidade populacional (hab/km²)
+    float pib_capita_carta_1, pib_capita_carta_2; // PIB per capita (PIB/população)
+    float super_poder_carta_1, super_poder_carta_2; // Super poder da carta
+
+    const float casting_bilhao = 1000000000.0; // Conversão de PIB para unidades
+    const char validacao[30] = "Cadastro com sucesso!"; // Mensagem de validação
 
 ```
 
@@ -106,73 +151,73 @@ Essas variáveis armazenam informações das cartas, como estado, código, nome 
 
 ### 5️⃣ Entrada de Dados para a Carta 1
 
-``` //Carta 1 :
-    printf("Carta 1 :\n");
+``` C
+    // Carta 1:
+
+    printf("%s", estilo); 
+    printf("Carta 1:\n");
 
     printf("Digite o estado da primeira carta (A-H): ");
     scanf(" %c", &estado_1);
 
-    printf("Digite o código da primeira carta : ");
+    printf("Digite o código da primeira carta: ");
     scanf(" %s", codigo_carta_1);
 
-    printf("Digite o nome da primeira cidade : ");
-    scanf(" %18[^\n]", nome_cidade_1);
+    printf("Digite o nome da primeira cidade: ");
+    scanf(" %17[^\n]", nome_cidade_1);
 
-    printf("Digite a quantidade da população da primeira carta : ");
-    scanf(" %d", &qtd_populacao_1);
+    printf("Digite a quantidade da população da primeira carta: ");
+    scanf("%d", &qtd_populacao_1);
 
-    printf("Digite a área em km2 da primeira carta : ");
-    scanf(" %f", &area_km_1);
+    printf("Digite a área em km2 da primeira carta: ");
+    scanf("%f", &area_km_1);
 
-    printf("Digite o PIB da primeira carta : ");
-    scanf(" %f", &pib_carta_1);
+    printf("Digite o PIB da primeira carta: ");
+    scanf("%f", &pib_carta_1);
 
-    printf("Digite o número de pontos turísticos da primeira carta : ");
-    scanf(" %d", &qtd_pontos_turisticos_1);
+    printf("Digite o número de pontos turísticos da primeira carta: ");
+    scanf("%d", &qtd_pontos_turisticos_1);
 
     printf("%s\n", validacao);
+
+    // Carta 2:
     
+    printf("%s", estilo);
+    printf("\nCarta 2:\n");
+
+    printf("Digite o estado da segunda carta (A-H): ");
+    scanf(" %c", &estado_2);
+
+    printf("Digite o código da segunda carta: ");
+    scanf(" %s", codigo_carta_2);
+
+    printf("Digite o nome da segunda cidade: ");
+    scanf(" %17[^\n]", nome_cidade_2);
+
+    printf("Digite a quantidade da população da segunda carta: ");
+    scanf("%d", &qtd_populacao_2);
+
+    printf("Digite a área em km2 da segunda carta: ");
+    scanf("%f", &area_km_2);
+
+    printf("Digite o PIB da segunda carta: ");
+    scanf("%f", &pib_carta_2);
+
+    printf("Digite o número de pontos turísticos da segunda carta: ");
+    scanf("%d", &qtd_pontos_turisticos_2);
+
+    printf("%s\n", validacao);
+
 ```
 Cada scanf recebe um dado do usuário e armazena na variável correspondente.
 scanf(" %18[^\n]", nome_cidade_1); → Lê até 18 caracteres, sendo escolhido o valor 18 pois o maior estado em 17 letras + 1 do caractere nulo, permitindo espaços.
 Após inserir os dados, exibe "Cadastro com sucesso!".
 
+### 6️⃣ Saída dos Dados (Exibição no Terminal)
 
-### 6️⃣ Entrada de Dados para a Carta 2
+``` C
+    printf("%s",estilo);
 
-```  //Carta 2 : 
-        printf("\nCarta 2:\n");
-        
-        printf("Digite o estado da segunda carta (A-H): ");
-        scanf(" %c", &estado_2);
-
-        printf("Digite o código da segunda carta: ");
-        scanf("%s", codigo_carta_2);
-
-        printf("Digite o nome da segunda cidade: ");
-        scanf(" %18[^\n]", nome_cidade_2);
-
-        printf("Digite a quantidade da população da segunda carta: ");
-        scanf("%d", &qtd_populacao_2);
-
-        printf("Digite a área em km2 da segunda carta: ");
-        scanf("%f", &area_km_2);
-
-        printf("Digite o PIB da segunda carta: ");
-        scanf("%f", &pib_carta_2);
-
-        printf("Digite o número de pontos turísticos da segunda carta: ");
-        scanf("%d", &qtd_pontos_turisticos_2);
-
-        printf("%s\n", validacao);
-
-```
-
-### 7️⃣ Saída dos Dados (Exibição no Terminal)
-
-``` //Carta 1 :
-
-    printf("\n+--------------------------------------+\n")  ;
     printf("| Carta 1:                              \n")  ;
     printf("| Estado: %c                            \n", estado_1);
     printf("| Código: %s                            \n", codigo_carta_1);
@@ -183,12 +228,13 @@ Após inserir os dados, exibe "Cadastro com sucesso!".
     printf("| Número de pontos turísticos: %d       \n", qtd_pontos_turisticos_1);
     printf("| Densidade Populacional: %.2f hab/km2  \n", densidade_carta_1);
     printf("| PIB per capita: R$ %.2f               \n", pib_capita_carta_1);
-    printf("+--------------------------------------+\n");
+    
+    printf("%s", estilo); 
 
+    // Segunda carta:
+    
+    printf("%s", estilo); 
 
-    //Carta 2 :
-
-    printf("\n+--------------------------------------+\n");
     printf("| Carta 2:                              \n");
     printf("| Estado: %c                            \n", estado_2);
     printf("| Código: %s                            \n", codigo_carta_2);
@@ -199,7 +245,8 @@ Após inserir os dados, exibe "Cadastro com sucesso!".
     printf("| Número de pontos turísticos: %d       \n", qtd_pontos_turisticos_2);
     printf("| Densidade Populacional: %.2f hab/km2  \n", densidade_carta_2);
     printf("| PIB per capita: R$ %.2f               \n", pib_capita_carta_2);
-    printf("+--------------------------------------+\n\n");
+   
+    printf("%s", estilo); 
 
 ```
 
@@ -207,32 +254,23 @@ Após inserir os dados, exibe "Cadastro com sucesso!".
 
 ```c
    
-   // Carta 1:
-    
-    calc_densidade_populacional = qtd_populacao_1 / area_km_1 ; // Calcula a densidade populacional
-    densidade_carta_1 = calc_densidade_populacional ; // Armazena o valor da densidade populacional da carta 1 
-    
-    //PIB per capita
-    pib_carta_1 *= casting_bilhao ; // Converte o PIB de decimal para bilhão
-    
-    calc_pib_per_capita = pib_carta_1 / qtd_populacao_1 ; // Calcula o PIB per capita
-    pib_capita_carta_1 = calc_pib_per_capita  ; // Armazena o valor do calculo do pib per capita
-    
-    pib_carta_1 /= casting_bilhao ; // Converte o PIB de volta para bilhões
+    // Cálculos para cumprir os critérios do desafio 2
 
+    // Calculo para densidade populacional 
+    densidade_carta_1 = qtd_populacao_1 / area_km_1 ; 
+    
+    densidade_carta_2 = qtd_populacao_2 / area_km_2 ; 
+    
+    //Calculos para PIB per capita 
+    pib_capita_carta_1 = (pib_carta_1 * casting_bilhao) / qtd_populacao_1 ;
+    
+    pib_capita_carta_2 = (pib_carta_2 * casting_bilhao) / qtd_populacao_2 ;
 
-    // Carta 2:
-    
-    calc_densidade_populacional = qtd_populacao_2 / area_km_2 ; // Calcula a densidade populacional
-    densidade_carta_2 = calc_densidade_populacional ; // Armazena o valor da densidade populacional da carta 2 
-    
-    //PIB per capita
-    pib_carta_2 *= casting_bilhao ; // Converte o PIB de decimal para bilhão
-    
-    calc_pib_per_capita = pib_carta_2 / qtd_populacao_2 ; // Calcula o PIB per capita
-    pib_capita_carta_2 = calc_pib_per_capita ; // Armazena o valor do calculo do pib per capita
-    
-    pib_carta_2 /= casting_bilhao ; // Converte o PIB de volta para bilhões
+    //Calculo para o Super poder 
+    super_poder_carta_1 = ((float)qtd_populacao_1 + area_km_1 + pib_carta_1 + (float)qtd_pontos_turisticos_1 + pib_capita_carta_1) - densidade_carta_1;
+
+    super_poder_carta_2 = ((float)qtd_populacao_2 + area_km_2 + pib_carta_2 + (float)qtd_pontos_turisticos_2 + pib_capita_carta_2) - densidade_carta_2;
+
 
 ```
 
@@ -256,4 +294,4 @@ Este repositório é de uso acadêmico, mas estou aberto a sugestões e melhoria
 
 ---
 
-📅 **Atualizado em:** 28/02/2025 📌 **Desenvolvido por:** Júlio Cézar
+📅 **Atualizado em:** 10/03/2025 📌 **Desenvolvido por:** Júlio Cézar
