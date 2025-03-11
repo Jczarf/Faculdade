@@ -1,55 +1,78 @@
-Super Trunfo - Mestre
+# 🃏 Super Trunfo - Nível Mestre
 
-   Bem-vindo ao repositório do projeto **Super Trunfo - Mestre**! Este projeto foi desenvolvido como parte das atividades acadêmicas da faculdade.
-   ## 📌 Sobre o Projeto
-   Este projeto é uma implementação básica do jogo **Super Trunfo**, onde os jogadores comparam atributos de cartas para determinar o vencedor. Ele inclui:
-   - Implementação de lógica de comparação de cartas.
-   - Estruturação básica de um jogo.
-   - Interface simples via terminal.
+## 📌 Descrição do Desafio
+Neste desafio final, você colocará suas cartas do **Super Trunfo de Países** para batalhar! Além de cadastrar os dados das cidades e calcular atributos importantes, agora você implementará a lógica de **comparação entre duas cartas**, determinando a vencedora em cada atributo e introduzindo o conceito de **Super Poder**.
 
-  ## 📌 Desafio nível mestre
-   
-  <img src ="src/mestre.jpg" style = "height: 500px ; width: 400px"/>
+---
 
+## 🎯 O que será implementado
 
-   ## 📁 Estrutura do Repositório
-   ```
-   Faculdade/
-    Projeto - Super_trunfo / 
-    Super_Trunfo - Mestre /
-    │-- super_trunfo_mestre.c  # Código-fonte principal
-    │-- super_trunfo_mestre    # Arquivo executável (compilado)
-    │-- README.md              # Documentação do projeto
+✅ **Entrada de Dados**: O usuário poderá inserir os dados de duas cartas.
+✅ **Armazenamento das Informações**: Os dados serão armazenados corretamente, com **população** representada por `unsigned long int` para suportar valores maiores.
+✅ **Cálculo Automático de Novos Atributos**:
+   - **Densidade Populacional** = População / Área (habitantes por km²)
+   - **PIB per Capita** = PIB / População (riqueza média por habitante)
+✅ **Cálculo do Super Poder**:
+   - Super Poder = Soma de todos os atributos numéricos (População, Área, PIB, Pontos Turísticos, PIB per Capita e o **inverso da Densidade Populacional**).
+✅ **Comparação de Cartas**:
+   - Para todos os atributos (exceto Densidade Populacional), vence a **carta com o maior valor**.
+   - Para **Densidade Populacional**, vence a **carta com o menor valor**.
+   - O **Super Poder** também será comparado e determinará a carta mais poderosa.
+✅ **Exibição dos Resultados**: O programa imprimirá o resultado da comparação de cada atributo, mostrando qual carta venceu.
 
-   ```
-   ## 🛠️ Tecnologias Utilizadas
-   O projeto foi desenvolvido utilizando:
-   - **Linguagem:** C
-   - **Compilador:** GCC
-   - **Ferramentas:** Git, VS Code
-   ## 🚀 Como Executar o Projeto
-   1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-2. Navegue até a pasta do projeto:
-   ```bash
-   cd Super_Trunfo_Mestre
-   ```
-3. Compile o código:
-   ```bash
-    gcc super_trunfo_mestre.c -o super_trunfo_mestre
-   ```
-4. Execute o programa:
-   ```bash
-    ./super_trunfo_mestre
-   ```
+### 🔹 Atributos das Cartas
+Cada carta conterá os seguintes atributos:
 
-## 📜 Explicação do Código
+| Atributo                   | Tipo                | Descrição |
+|----------------------------|---------------------|-----------|
+| Estado                     | Char                | Uma letra de 'A' a 'H' representando um estado |
+| Código da Carta            | String              | A letra do estado seguida de um número (ex: A01, B03) |
+| Nome da Cidade             | String              | Nome da cidade |
+| População                  | Unsigned long int   | Número de habitantes |
+| Área (km²)                 | Float               | Área da cidade |
+| PIB (bilhões de reais)     | Float               | Produto Interno Bruto |
+| Número de Pontos Turísticos | Int                | Quantidade de pontos turísticos |
+| **Densidade Populacional**  | Float               | População / Área |
+| **PIB per Capita**          | Float               | PIB / População |
+| **Super Poder**             | Float               | Soma de todos os atributos relevantes |
 
-### 📌 Estrutura Geral
+---
 
-O código solicita ao usuário que insira dados de duas cartas e, em seguida, exibe esses dados no terminal. Além disso, ele calcula a densidade populacional e o PIB per capita de cada cidade, permitindo a comparação entre as cartas. Por fim, ele calcula o super poder de cada carta, que é uma métrica composta por vários atributos.
+## 📜 Exemplo de Execução
+
+```bash
+🃏 Bem-vindo ao Super Trunfo de Países!
+
+🔹 Insira os dados da primeira carta:
+Estado: A
+Código da Carta: A01
+Nome da Cidade: São Paulo
+População: 12325000
+Área: 1521.11
+PIB: 699.28
+Número de Pontos Turísticos: 50
+
+🔹 Insira os dados da segunda carta:
+Estado: B
+Código da Carta: B02
+Nome da Cidade: Rio de Janeiro
+População: 6748000
+Área: 1200.25
+PIB: 300.50
+Número de Pontos Turísticos: 30
+
+📜 Comparação de Cartas:
+
+População: Carta 1 venceu (1)
+Área: Carta 1 venceu (1)
+PIB: Carta 1 venceu (1)
+Pontos Turísticos: Carta 1 venceu (1)
+Densidade Populacional: Carta 2 venceu (0)
+PIB per Capita: Carta 1 venceu (1)
+Super Poder: Carta 1 venceu (1)
+```
+
+---
 
 ### 1️⃣ Inclusão Biblioteca 
 
@@ -66,7 +89,7 @@ Inclui a biblioteca padrão do C para entrada e saída de dados (printf, scanf e
 
 ```c
 
-    int main () {
+    int main () {}
 
 ```
 Inicia a função main(), onde o programa será executado.
@@ -85,40 +108,51 @@ Inicia a função main(), onde o programa será executado.
 ### 4️⃣ Declaração de Variáveis
 
 ```c
-
     const int qtd_cartas = 2; // Quantidade de cartas no jogo
     int identificador_carta, comparador; // Variáveis para comparações
+    
+    // **Declaração das variáveis**
     char estado_1, estado_2; // Estados das cartas (A-H)
     char codigo_carta_1[5], codigo_carta_2[5]; // Códigos das cartas (até 4 caracteres)
     char nome_cidade_1[18], nome_cidade_2[18]; // Nomes das cidades (até 17 caracteres)
-    unsigned long int qtd_populacao_1, qtd_populacao_2; // População das cidades
-    float area_km_1, area_km_2; // Área das cidades em km²
-    float pib_carta_1, pib_carta_2; // PIB das cidades em bilhões de reais
-    int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2; // Pontos turísticos das cidades
-    float calc_densidade_populacional; // Variável para cálculo da densidade populacional
-    float calc_pib_per_capita; // Variável para cálculo do PIB per capita
-    float pib_capita_carta_1, pib_capita_carta_2; // PIB per capita das cartas
-    float densidade_carta_1, densidade_carta_2; // Densidade populacional das cartas
-    const float casting_bilhao = 1000000000; // Constante para conversão de bilhões para unidades
+    unsigned long int qtd_populacao_1, qtd_populacao_2; // População dos países
+    float area_km_1, area_km_2; // Área em km²
+    float pib_carta_1, pib_carta_2; // PIB em bilhões de reais
+    int qtd_pontos_turisticos_1, qtd_pontos_turisticos_2; // Pontos turísticos
+
+    // **Variaveis para estilo**
+    const char estilo [50] = "\n+--------------------------------------+\n" ;
+
+    // **Variáveis para cálculos**
+    float densidade_carta_1, densidade_carta_2; // Densidade populacional (hab/km²)
+    float pib_capita_carta_1, pib_capita_carta_2; // PIB per capita (PIB/população)
+    float super_poder_carta_1, super_poder_carta_2; // Super poder da carta
+
+    const float casting_bilhao = 1000000000.0; // Conversão de PIB para unidades
     const char validacao[30] = "Cadastro com sucesso!"; // Mensagem de validação
+    
 
 ```
 
-Essas variáveis armazenam informações das cartas, como estado, código, nome da cidade, população, área, PIB e número de pontos turísticos, e os cálculos das variáveis para os resultados das questões.
+Essas variáveis armazenam informações das cartas, como estado, código, nome da cidade, população, área, PIB e número de pontos turísticos, e os cálculos das variáveis e as comparações. 
 
-### 5️⃣ Entrada de Dados para a Carta 1
+### 5️⃣ Entrada de Dados 
 
-``` //Carta 1 :
-    printf("Carta 1:\n");
+``` C
+    // Carta 1:
+    
+    printf("%s", estilo) ;
+    
+    printf("\nCarta 1:\n");
 
     printf("Digite o estado da primeira carta (A-H): ");
     scanf(" %c", &estado_1);
 
     printf("Digite o código da primeira carta: ");
-    scanf("%s", codigo_carta_1);
+    scanf(" %s", codigo_carta_1);
 
     printf("Digite o nome da primeira cidade: ");
-    scanf(" %18[^\n]", nome_cidade_1);
+    scanf(" %17[^\n]", nome_cidade_1);
 
     printf("Digite a quantidade da população da primeira carta: ");
     scanf("%ld", &qtd_populacao_1);
@@ -133,26 +167,20 @@ Essas variáveis armazenam informações das cartas, como estado, código, nome 
     scanf("%d", &qtd_pontos_turisticos_1);
 
     printf("%s\n", validacao);
+
+    // Carta 2:
     
-```
-Cada scanf recebe um dado do usuário e armazena na variável correspondente.
-scanf(" %18[^\n]", nome_cidade_1); → Lê até 18 caracteres, sendo escolhido o valor 18 pois o maior estado em 17 letras + 1 do caractere nulo, permitindo espaços.
-Após inserir os dados, exibe "Cadastro com sucesso!".
-
-
-### 6️⃣ Entrada de Dados para a Carta 2
-
-```  //Carta 2 :
+    printf("%s", estilo);
     printf("\nCarta 2:\n");
 
     printf("Digite o estado da segunda carta (A-H): ");
     scanf(" %c", &estado_2);
 
     printf("Digite o código da segunda carta: ");
-    scanf("%s", codigo_carta_2);
+    scanf(" %s", codigo_carta_2);
 
     printf("Digite o nome da segunda cidade: ");
-    scanf(" %18[^\n]", nome_cidade_2);
+    scanf(" %17[^\n]", nome_cidade_2);
 
     printf("Digite a quantidade da população da segunda carta: ");
     scanf("%ld", &qtd_populacao_2);
@@ -169,124 +197,115 @@ Após inserir os dados, exibe "Cadastro com sucesso!".
     printf("%s\n", validacao);
 
 ```
-
-### 7️⃣ Saída dos Dados (Exibição no Terminal)
-
-``` //Carta 1 :
-
-    printf("\n+--------------------------------------+\n");
-    printf("| Carta 1:                             |\n");
-    printf("| Estado: %c                            |\n", estado_1);
-    printf("| Código: %s                           |\n", codigo_carta_1);
-    printf("| Nome da cidade: %s                  |\n", nome_cidade_1);
-    printf("| População: %lu                       |\n", qtd_populacao_1);
-    printf("| Área: %.2f km2                       |\n", area_km_1);
-    printf("| PIB: R$ %.2f bilhões de reais        |\n", pib_carta_1);
-    printf("| Número de pontos turísticos: %d      |\n", qtd_pontos_turisticos_1);
-    printf("| Densidade Populacional: %.2f hab/km2 |\n", densidade_carta_1);
-    printf("| PIB per capita: R$ %.2f             |\n", pib_capita_carta_1);
-    printf("| Super poder: %.2f                   |\n", super_poder_carta_1);
-    printf("+--------------------------------------+\n");
+Cada scanf recebe um dado do usuário e armazena na variável correspondente.
+scanf(" %18[^\n]", nome_cidade_1); → Lê até 18 caracteres, sendo escolhido o valor 18 pois o maior estado em 17 letras + 1 do caractere nulo, permitindo espaços.
+Após inserir os dados, exibe "Cadastro com sucesso!".
 
 
-    //Carta 2 :
-
-    printf("\n+--------------------------------------+\n");
-    printf("| Carta 2:                             |\n");
-    printf("| Estado: %c                            |\n", estado_2);
-    printf("| Código: %s                           |\n", codigo_carta_2);
-    printf("| Nome da cidade: %s                  |\n", nome_cidade_2);
-    printf("| População: %lu                       |\n", qtd_populacao_2);
-    printf("| Área: %.2f km2                       |\n", area_km_2);
-    printf("| PIB: R$ %.2f bilhões de reais        |\n", pib_carta_2);
-    printf("| Número de pontos turísticos: %d      |\n", qtd_pontos_turisticos_2);
-    printf("| Densidade Populacional: %.2f hab/km2 |\n", densidade_carta_2);
-    printf("| PIB per capita: R$ %.2f             |\n", pib_capita_carta_2);
-    printf("| Super poder: %.2f                   |\n", super_poder_carta_2);
-    printf("+--------------------------------------+\n");
-        
+### 7️⃣ Área de calculos : 
 
 
-```
 
-### 8️⃣ Área de calculos : 
 
-```c
-   
-   // Carta 1:
+``` C   
     
-    calc_densidade_populacional = qtd_populacao_1 / area_km_1 ; // Calcula a densidade populacional
-    densidade_carta_1 = calc_densidade_populacional ; // Armazena o valor da densidade populacional da carta 1 
+    // Calculo para densidade populacional 
+    densidade_carta_1 = qtd_populacao_1 / area_km_1 ; 
+    densidade_carta_2 = qtd_populacao_2 / area_km_2 ; 
     
-    //PIB per capita
-    pib_carta_1 *= casting_bilhao ; // Converte o PIB de decimal para bilhão
-    
-    calc_pib_per_capita = pib_carta_1 / qtd_populacao_1 ; // Calcula o PIB per capita
-    pib_capita_carta_1 = calc_pib_per_capita  ; // Armazena o valor do calculo do pib per capita
-    
-    pib_carta_1 /= casting_bilhao ; // Converte o PIB de volta para bilhões
-    
-    //O super poder é uma métrica composta pela soma de vários atributos da carta, menos a densidade populacional:
+    //Calculos para PIB per capita 
+    pib_capita_carta_1 = (pib_carta_1 * casting_bilhao) / qtd_populacao_1 ;
+    pib_capita_carta_2 = (pib_carta_2 * casting_bilhao) / qtd_populacao_2 ;
+
+    //Calculo para o Super poder 
     super_poder_carta_1 = ((float)qtd_populacao_1 + area_km_1 + pib_carta_1 + (float)qtd_pontos_turisticos_1 + pib_capita_carta_1) - densidade_carta_1;
+    super_poder_carta_2 = ((float)qtd_populacao_2 + area_km_2 + pib_carta_2 + (float)qtd_pontos_turisticos_2 + pib_capita_carta_2) - densidade_carta_2;
+ 
+```
+### 8️⃣ Saída dos Dados (Exibição no Terminal)
 
+``` bash
+    
+    // Saída de dados
+    
+    // Primeira Carta : 
+    
+    // Estilo de linha para melhorar a visualização
+    printf("%s",estilo);
 
-    // Carta 2:
+    printf("| Carta 1:                              \n")  ;
+    printf("| Estado: %c                            \n", estado_1);
+    printf("| Código: %s                            \n", codigo_carta_1);
+    printf("| Nome da cidade: %s                    \n", nome_cidade_1);
+    printf("| População: %d                         \n", qtd_populacao_1);
+    printf("| Área: %.2f km2                        \n", area_km_1);
+    printf("| PIB: R$ %.2f bilhões de reais         \n", pib_carta_1);
+    printf("| Número de pontos turísticos: %d       \n", qtd_pontos_turisticos_1);
+    printf("| Densidade Populacional: %.2f hab/km2  \n", densidade_carta_1);
+    printf("| PIB per capita: R$ %.2f               \n", pib_capita_carta_1);
     
-    calc_densidade_populacional = qtd_populacao_2 / area_km_2 ; // Calcula a densidade populacional
-    densidade_carta_2 = calc_densidade_populacional ; // Armazena o valor da densidade populacional da carta 2 
+    printf("%s", estilo); 
+
+    // Segunda carta:
     
-    //PIB per capita
-    pib_carta_2 *= casting_bilhao ; // Converte o PIB de decimal para bilhão
-    
-    calc_pib_per_capita = pib_carta_2 / qtd_populacao_2 ; // Calcula o PIB per capita
-    pib_capita_carta_2 = calc_pib_per_capita ; // Armazena o valor do calculo do pib per capita
-    
-    pib_carta_2 /= casting_bilhao ; // Converte o PIB de volta para bilhões
+    printf("%s", estilo); 
+
+    printf("| Carta 2:                              \n");
+    printf("| Estado: %c                            \n", estado_2);
+    printf("| Código: %s                            \n", codigo_carta_2);
+    printf("| Nome da cidade: %s                    \n", nome_cidade_2);
+    printf("| População: %d                         \n", qtd_populacao_2);
+    printf("| Área: %.2f km2                        \n", area_km_2);
+    printf("| PIB: R$ %.2f bilhões de reais         \n", pib_carta_2);
+    printf("| Número de pontos turísticos: %d       \n", qtd_pontos_turisticos_2);
+    printf("| Densidade Populacional: %.2f hab/km2  \n", densidade_carta_2);
+    printf("| PIB per capita: R$ %.2f               \n", pib_capita_carta_2);
+   
+    printf("%s", estilo); 
+
 
 ```
+
 ### 9️⃣ Comparações das Cartas
 
-```
- 9️⃣ Comparações das Cartas
-    O programa compara os atributos das duas cartas e determina qual carta vence em cada categoria. A lógica de comparação é baseada em operadores relacionais (>, <), e o resultado é exibido no terminal.
+``` C
+    
+    // Comparações das cartas
+    printf("%s", estilo);
+    printf("\n| Comparações das cartas:\n");
 
-    printf("\nComparações das cartas:\n");
+    identificador_carta = qtd_cartas; // Inicializa o identificador de carta
 
-    // Comparação de população
-    comparador = qtd_populacao_1 > qtd_populacao_2;
+    comparador = qtd_populacao_1 > qtd_populacao_2; // Compara população
     identificador_carta = qtd_cartas - comparador;
-    printf("População: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| População: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
-    // Comparação de área
-    comparador = area_km_1 > area_km_2;
+    comparador = area_km_1 > area_km_2; // Compara área
     identificador_carta = qtd_cartas - comparador;
-    printf("Área: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| Área: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
-    // Comparação de PIB
-    comparador = pib_carta_1 > pib_carta_2;
+    comparador = pib_carta_1 > pib_carta_2; // Compara PIB
     identificador_carta = qtd_cartas - comparador;
-    printf("PIB: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| PIB: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
-    // Comparação de pontos turísticos
-    comparador = qtd_pontos_turisticos_1 > qtd_pontos_turisticos_2;
+    comparador = qtd_pontos_turisticos_1 > qtd_pontos_turisticos_2; // Compara pontos turísticos
     identificador_carta = qtd_cartas - comparador;
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| Pontos Turísticos: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
-    // Comparação de densidade populacional
-    comparador = densidade_carta_1 < densidade_carta_2;
+    comparador = densidade_carta_1 < densidade_carta_2; // Compara densidade populacional
     identificador_carta = qtd_cartas - comparador;
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| Densidade Populacional: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
-    // Comparação de PIB per capita
-    comparador = pib_capita_carta_1 > pib_capita_carta_2;
+    comparador = pib_capita_carta_1 > pib_capita_carta_2; // Compara PIB per capita
     identificador_carta = qtd_cartas - comparador;
-    printf("PIB per Capita: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("| PIB per Capita: Carta %d venceu (%d)\n", identificador_carta, comparador);
 
-    // Comparação de super poder
-    comparador = super_poder_carta_1 > super_poder_carta_2;
+    comparador = super_poder_carta_1 > super_poder_carta_2; // Compara super poder
     identificador_carta = qtd_cartas - comparador;
-    printf("Super poder: Carta %d venceu (%d)\n", identificador_carta, comparador);
-
+    printf("| Super poder: Carta %d venceu (%d)\n", identificador_carta, comparador);
+    printf("%s", estilo);
+        
+    
 ```
 
 ###  Retorno da Função
@@ -307,4 +326,4 @@ Este repositório é de uso acadêmico, mas estou aberto a sugestões e melhoria
 
 ---
 
-📅 **Atualizado em:** 28/02/2025 📌 **Desenvolvido por:** Júlio Cézar
+📅 **Atualizado em:** 11/03/2025 📌 **Desenvolvido por:** Júlio Cézar
