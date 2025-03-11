@@ -44,7 +44,7 @@ int main() {
     scanf(" %17[^\n]", nome_cidade_1);
 
     printf("Digite a quantidade da população da primeira carta: ");
-    scanf("%d", &qtd_populacao_1);
+    scanf("%ld", &qtd_populacao_1);
 
     printf("Digite a área em km2 da primeira carta: ");
     scanf("%f", &area_km_1);
@@ -72,7 +72,7 @@ int main() {
     scanf(" %17[^\n]", nome_cidade_2);
 
     printf("Digite a quantidade da população da segunda carta: ");
-    scanf("%d", &qtd_populacao_2);
+    scanf("%ld", &qtd_populacao_2);
 
     printf("Digite a área em km2 da segunda carta: ");
     scanf("%f", &area_km_2);
@@ -111,7 +111,7 @@ int main() {
     printf("| Estado: %c                            \n", estado_1);
     printf("| Código: %s                            \n", codigo_carta_1);
     printf("| Nome da cidade: %s                    \n", nome_cidade_1);
-    printf("| População: %d                         \n", qtd_populacao_1);
+    printf("| População: %ld                         \n", qtd_populacao_1);
     printf("| Área: %.2f km2                        \n", area_km_1);
     printf("| PIB: R$ %.2f bilhões de reais         \n", pib_carta_1);
     printf("| Número de pontos turísticos: %d       \n", qtd_pontos_turisticos_1);
@@ -128,7 +128,7 @@ int main() {
     printf("| Estado: %c                            \n", estado_2);
     printf("| Código: %s                            \n", codigo_carta_2);
     printf("| Nome da cidade: %s                    \n", nome_cidade_2);
-    printf("| População: %d                         \n", qtd_populacao_2);
+    printf("| População: %ld                         \n", qtd_populacao_2);
     printf("| Área: %.2f km2                        \n", area_km_2);
     printf("| PIB: R$ %.2f bilhões de reais         \n", pib_carta_2);
     printf("| Número de pontos turísticos: %d       \n", qtd_pontos_turisticos_2);
