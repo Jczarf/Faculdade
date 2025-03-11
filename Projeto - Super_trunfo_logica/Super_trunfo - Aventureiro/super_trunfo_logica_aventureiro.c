@@ -132,15 +132,6 @@ int main() {
      switch (batalha) {
 
         case 1:
-            
-            printf("%s",estilo);           
-            printf("| Nome do país: \n");
-            printf("| Carta 1: %s\n", nome_pais_1);
-            printf("| Carta 2: %s\n", nome_pais_2);
-            printf("%s",estilo);            
-            break;
-
-        case 2:
            
             printf("%s",estilo);
             printf("\n| Atributo usado: (Quantidade populacional) \n");
@@ -156,7 +147,7 @@ int main() {
             printf("%s",estilo);            
             break;
 
-        case 3:
+        case 2:
             
             printf("%s",estilo);            
             printf("\n| Atributo usado: (Área em km²) \n");
@@ -172,7 +163,7 @@ int main() {
             printf("%s",estilo);            
             break;
 
-        case 4:
+        case 3:
             
             printf("%s",estilo);            
             printf("\n| Atributo usado: (PIB do país) \n");
@@ -188,7 +179,7 @@ int main() {
             printf("%s",estilo);           
             break;
 
-        case 5:
+        case 4:
             
             printf("%s",estilo);            
             printf("\n| Atributo usado: (Número de pontos turísticos) \n");
@@ -204,7 +195,7 @@ int main() {
             printf("%s",estilo);            
             break;
 
-        case 6:
+        case 5:
             
             printf("%s",estilo);            
             printf("\n| Atributo usado: (Densidade populacional) \n");
@@ -222,7 +213,7 @@ int main() {
 
         default:
             printf("%s",estilo);            
-            printf("| Opção inválida! Escolha um número entre 1 e 6.\n");
+            printf("| Opção inválida! Escolha um número entre 1 e 5.\n");
             printf("%s",estilo);            
             
     }
