@@ -410,7 +410,7 @@ if (selecao == 2) {
         printf("%s", estilo);
         printf("| Rodada vencedora é : %s \n", vencedor_rodada);
     }
-}
+}h
 
 ```
 
