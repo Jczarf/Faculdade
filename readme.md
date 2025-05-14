@@ -54,6 +54,20 @@ A organização dos arquivos segue uma estrutura baseada em níveis de desafio e
 - `super_trunfo_logica_mestre`   → Arquivo executável (compilado).
 - `README.md`                     → Documentação do projeto.
 
+### ♟️ **Xadrez - Movimentação peças de xadrez**
+#### **Xadrez - Novato/** *(Uso de Estruras de repetição Básicas)*
+- `xadrez_novato.c` → Código-fonte principal.
+- `xadrez_novato`   → Arquivo executável (compilado).
+- `README.md`       → Documentação do projeto.
+#### **Xadrez - Aventureiro/** *(Uso de Estrutras de repetição alinhadas)*
+- `xadrez_aventureiro.c` → Código-fonte principal.
+- `xadrez_aventureiro`   → Arquivo executável (compilado).
+- `README.md`            → Documentação do projeto.
+#### **Xadrez - Mestre/** 
+
+
+
+
 Este repositório contém **seis implementações do jogo Super Trunfo**, todas desenvolvidas em **linguagem C**, abordando desde conceitos introdutórios até a aplicação de lógica para tomada de decisões no jogo.
 
 ---
