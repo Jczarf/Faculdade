@@ -63,8 +63,10 @@ A organização dos arquivos segue uma estrutura baseada em níveis de desafio e
 - `xadrez_aventureiro.c` → Código-fonte principal.
 - `xadrez_aventureiro`   → Arquivo executável (compilado).
 - `README.md`            → Documentação do projeto.
-#### **Xadrez - Mestre/** 
-
+#### **Xadrez - Mestre/** *(Uso de recursividade e loops alinhados)*
+- `xadrez_mestre.c` → Código-fonte principal.
+- `xadrez_mestre`   → Arquivo executável (compilado).
+- `README.md`            → Documentação do projeto.
 
 
 
