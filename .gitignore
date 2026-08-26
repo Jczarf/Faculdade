@@ -1,0 +1,27 @@
+# Artefatos de compilação C/C++
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+a.out
+build/
+bin/
+
+# Executáveis locais destes exercícios
+xadrez_aventureiro
+xadrez_mestre
+xadrez_novato
+super_trunfo_aventureiro
+super_trunfo_iniciante
+super_trunfo_mestre
+super_trunfo_logica_aventureiro
+super_trunfo_logica_mestre
+super_trunfo_logica_novato
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
