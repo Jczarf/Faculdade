@@ -1,115 +1,64 @@
-# 🎓 Bem-vindo ao Repositório Acadêmico!
+# Projetos Acadêmicos em C
 
-Este repositório foi criado para documentar minha trajetória na **Ciência da Computação**, servindo como um espaço de aprendizado contínuo e armazenamento dos projetos desenvolvidos ao longo da minha formação acadêmica. Ele contém códigos, documentações e desafios práticos que refletem minha evolução no curso.
+Repositório de exercícios e projetos desenvolvidos durante a graduação em **Ciência da Computação**, com foco em fundamentos de programação, lógica, estruturas de controle, funções e recursividade.
 
-O objetivo deste repositório é consolidar o conhecimento adquirido por meio de práticas de programação, aplicação de conceitos teóricos e desenvolvimento de projetos que reforçam habilidades fundamentais na área da computação.
+> Este é um repositório acadêmico: os projetos representam etapas de aprendizado e não são apresentados como aplicações de produção.
 
----
+## Projetos
 
-## 📌 Sobre o Repositório
+### Super Trunfo
 
-Aqui estão reunidos projetos desenvolvidos ao longo do curso, desde conceitos básicos de lógica de programação até desafios mais aplicados que envolvem manipulação de informações e comparação de dados. Cada implementação visa aprimorar minhas habilidades e demonstrar meu progresso como estudante.
+Três etapas progressivas trabalhando cadastro, cálculos e comparação de atributos:
 
-Além das atividades acadêmicas, este repositório também funciona como um histórico de aprendizado, permitindo revisitar códigos, comparar abordagens e aplicar melhorias com base no conhecimento adquirido ao longo do tempo.
+- **Iniciante** — estruturas básicas e entrada/saída;
+- **Aventureiro** — cálculos e manipulação de atributos;
+- **Mestre** — comparação de dados e lógica mais estruturada.
 
-Cada projeto segue boas práticas de organização e documentação, garantindo que o código seja compreensível e bem estruturado para consultas futuras e avaliações acadêmicas.
+### Super Trunfo — Lógica Computacional
 
----
+Três exercícios progressivos voltados a estruturas condicionais e tomada de decisão:
 
-## 📁 Estrutura do Repositório
+- **Novato** — condições simples;
+- **Aventureiro** — condições aninhadas e comparação de atributos;
+- **Mestre** — composição de regras e lógica de jogo.
 
-A organização dos arquivos segue uma estrutura baseada em níveis de desafio e conceitos abordados:
+### Movimentação de Xadrez
 
-### 🃏 **Super Trunfo - Implementações Gerais**
+Exercícios de controle de fluxo aplicados à movimentação de peças:
 
-#### **Super_Trunfo_Novato/** *(Cadastro de Cartas e Estruturas Básicas)*
-- `super_trunfo_novato.c` → Código-fonte principal.
-- `super_trunfo_novato`    → Arquivo executável (compilado).
-- `README.md`              → Documentação do projeto.
+- **Novato** — estruturas de repetição;
+- **Aventureiro** — combinação de estruturas de repetição;
+- **Mestre** — recursividade e composição de loops.
 
-#### **Super_Trunfo_Aventureiro/** *( Cálculo de Atributos )*
-- `super_trunfo_aventureiro.c` → Código-fonte principal.
-- `super_trunfo_aventureiro`   → Arquivo executável (compilado).
-- `README.md`                  → Documentação do projeto.
+Cada pasta contém o arquivo-fonte `.c` e sua documentação específica.
 
-#### **Super_Trunfo_Mestre/** *(Cálculo de Atributos e Comparação de Dados)*
-- `super_trunfo_mestre.c`      → Código-fonte principal.
-- `super_trunfo_mestre`        → Arquivo executável (compilado).
-- `README.md`                  → Documentação do projeto.
+## Tecnologias
 
-### 🧠 **Super Trunfo - Lógica Computacional**
+`C` · `GCC` · `Git` · `GitHub`
 
-#### **Super_Trunfo_Lógica_Novato/** *(Uso de Condições Simples e Estruturas Básicas)*
-- `super_trunfo_logica_novato.c` → Código-fonte principal.
-- `super_trunfo_logica_novato`   → Arquivo executável (compilado).
-- `README.md`                    → Documentação do projeto.
+## Compilar e executar
 
-#### **Super_Trunfo_Lógica_Aventureiro/** *(Comparação de Atributos e Uso de Condições Aninhadas)*
-- `super_trunfo_logica_aventureiro.c` → Código-fonte principal.
-- `super_trunfo_logica_aventureiro`   → Arquivo executável (compilado).
-- `README.md`                          → Documentação do projeto.
+Clone o repositório:
 
-#### **Super_Trunfo_Lógica_Mestre/** *(Criação de Lógica de Jogo e Aplicação de Comparações Estruturadas)*
-- `super_trunfo_logica_mestre.c` → Código-fonte principal.
-- `super_trunfo_logica_mestre`   → Arquivo executável (compilado).
-- `README.md`                     → Documentação do projeto.
+```bash
+git clone https://github.com/Jczarf/Faculdade.git
+cd Faculdade
+```
 
-### ♟️ **Xadrez - Movimentação peças de xadrez**
-#### **Xadrez - Novato/** *(Uso de Estruras de repetição Básicas)*
-- `xadrez_novato.c` → Código-fonte principal.
-- `xadrez_novato`   → Arquivo executável (compilado).
-- `README.md`       → Documentação do projeto.
-#### **Xadrez - Aventureiro/** *(Uso de Estrutras de repetição alinhadas)*
-- `xadrez_aventureiro.c` → Código-fonte principal.
-- `xadrez_aventureiro`   → Arquivo executável (compilado).
-- `README.md`            → Documentação do projeto.
-#### **Xadrez - Mestre/** *(Uso de recursividade e loops alinhados)*
-- `xadrez_mestre.c` → Código-fonte principal.
-- `xadrez_mestre`   → Arquivo executável (compilado).
-- `README.md`            → Documentação do projeto.
+Entre na pasta do exercício desejado e compile o respectivo arquivo `.c`:
 
+```bash
+gcc arquivo.c -Wall -Wextra -o programa
+./programa
+```
 
+Os binários gerados localmente são ignorados pelo Git. O repositório mantém somente código-fonte e documentação, evitando versionar artefatos específicos de uma máquina.
 
-Este repositório contém **seis implementações do jogo Super Trunfo**, todas desenvolvidas em **linguagem C**, abordando desde conceitos introdutórios até a aplicação de lógica para tomada de decisões no jogo.
+## Objetivo
 
----
+O repositório serve como registro da evolução nos fundamentos de programação e como material de consulta para revisitar soluções, comparar abordagens e refatorar exercícios conforme o aprendizado avança.
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+## Contato
 
-- **Linguagem:** C
-- **Compilador:** GCC
-- **Ambiente de Desenvolvimento:** VS Code
-- **Versionamento de Código:** Git/GitHub
-- **Técnicas Aplicadas:** Entrada e saída de dados, operadores relacionais, estruturas de decisão, manipulação de strings, cálculos matemáticos e conversão de tipos.
-
----
-
-## 🚀 Como Utilizar o Repositório
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-2. **Acesse a pasta do projeto desejado:**
-   ```bash
-   cd Super_Trunfo_Mestre
-   ```
-3. **Compile o código (caso não esteja compilado):**
-   ```bash
-   gcc super_trunfo_mestre.c -o super_trunfo_mestre
-   ```
-4. **Execute o programa:**
-   ```bash
-   ./super_trunfo_mestre
-   ```
-
----
-
-## 🤝 Contribuição e Contato
-
-Este repositório tem como objetivo principal o aprendizado acadêmico e a troca de conhecimento. Caso tenha sugestões, dúvidas ou melhorias a serem propostas, sinta-se à vontade para abrir uma issue ou contribuir com um pull request.
-
-📧 **Contato:** [Jczarf.oliveira@gmail.com](mailto:Jczarf.oliveira@gmail.com)
-
-📌 **Desenvolvido por:** Júlio Cézar  
-📅 **Última atualização:** 11/03/2025
+- [GitHub @Jczarf](https://github.com/Jczarf)
+- [LinkedIn](https://www.linkedin.com/in/j%C3%BAlio-c%C3%A9zar-0a26152b2/)
